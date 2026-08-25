@@ -31,9 +31,15 @@ class CategoriaSeeder extends Seeder
         Categoria::create([
             'nome' => 'Bebidas',
             'descricao' => 'Bebidas Diversas',
-            'ativo' => True,
+            'ativo' => true,
             'ordem_exibicao' => 3
         ]);
 
+        Categoria::create([
+            'nome' => 'Sobremesas',
+            'descricao' => 'Sobremesas Diversas',
+            'ativo' => true,
+            'ordem_exibicao' => 4
+        ]);
     }
 }
