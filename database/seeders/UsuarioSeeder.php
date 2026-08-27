@@ -15,12 +15,12 @@ class UsuarioSeeder extends Seeder
     {
         User::create(
             [
-                'nome' => 'Admin',
-                'email' =>'admin@lanchonete.com',
-                'telefone' =>'999999999',
-                'password' =>'password',
+                'nome' => 'Admin', 
+                'email' => 'admin@lanchonete.com', 
+                'telefone' => '999999999', 
+                'password' => 'password',
                 'tipo' => User::TIPO_ADMIN
             ]
-            );
+        );
     }
 }

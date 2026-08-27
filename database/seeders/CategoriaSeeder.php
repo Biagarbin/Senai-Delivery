@@ -13,8 +13,7 @@ class CategoriaSeeder extends Seeder
      */
     public function run(): void
     {
-        Categoria::create
-        ([
+        Categoria::create([
             'nome' => 'Lanches',
             'descricao' => 'Lanches Diversos',
             'ativo' => true,
@@ -25,7 +24,7 @@ class CategoriaSeeder extends Seeder
             'nome' => 'Porções',
             'descricao' => 'Porções Diversas',
             'ativo' => true,
-            'ordem_exibicao' => 1
+            'ordem_exibicao' => 2
         ]);
 
         Categoria::create([

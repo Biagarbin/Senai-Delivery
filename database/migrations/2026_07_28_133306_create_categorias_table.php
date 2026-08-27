@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('descricao')->nullable();
             $table->boolean('ativo')->default(true);
             $table->unsignedInteger('ordem_exibicao')->default(0);
-            $table->softDeletes();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -16,38 +16,75 @@ class ProdutoSeeder extends Seeder
     {
         $produtos = [
             'Lanches' => [
-                ['nome' => 'X-Burguer', 'descricao' => 'Pão, hambúrguer,
-                queijo e molho especial', 'preco' => 18.90, 'destaque' => true ],
-                ['nome' => 'X-Bancon', 'descricao' => 'Pão, hambúrguer, 
-                queijo, bacon e salada', 'preco' => 18.90, 'destaque' => true ],
-
+                [
+                    'nome' => 'X-Burger',
+                    'descricao' => 'Pão, hambúrguer, 
+                queijo e molho especial',
+                    'preco' => '18.90',
+                    'destaque' => true
+                ],
+                [
+                    'nome' => 'X-Bacon',
+                    'descricao' => 'Pão, hambúrguer, 
+                queijo, bacon e salada',
+                    'preco' => 24.90,
+                    'destaque' => true
+                ],
             ],
 
             'Porções' => [
-                ['nome' => 'Batata Frita', 'descricao' => 'Porção de Batata Frita',
-                'preco' => 22.90, 'destaque' => false],
-                ['nome' => 'Calabresa Acebolada', 'descricao' => 'Calabresa fatiada com cebola', 
-                'preco' => 29.90, 'destaque' => true],
+
+                [
+                    'nome' => 'Batata Frita',
+                    'descricao' => 'Porção de Batata frita ',
+                    'preco' => 22.90,
+                    'destaque' => false
+                ],
+                [
+                    'nome' => 'Calabresa Acebolada',
+                    'descricao' => 'Calabresa fatiada com
+                 cebola',
+                    'preco' => 29.90,
+                    'destaque' => true
+                ],
             ],
 
             'Bebidas' => [
-                ['nome' => 'Refrigerante', 'descricao' => 'Refrigerante Lata',
-                'preco' => 6.00, 'destaque' => false],
-                ['nome' => 'Suco de Laranja', 'descricao' => 'Suco natural de laranja',
-                'preco' => 10.00, 'destaque' => true],
+
+                [
+                    'nome' => 'Refrigerante',
+                    'descricao' => 'Refrigerante Lata',
+                    'preco' => 6.00,
+                    'destaque' => false
+                ],
+                [
+                    'nome' => 'Suco de Laranja',
+                    'descricao' => 'Suco natural de laranja',
+                    'preco' => 10.00,
+                    'destaque' => true
+                ],
             ],
 
             'Sobremesas' => [
-                ['nome' => 'Pudim', 'descricao' => 'Fatia de pudim',
-                'preco' => 9.90, 'destaque' => false],
-                ['nome' => 'Sorvete', 'descricao' => 'Sorvete com cobertura',
-                'preco' => 10.00, 'destaque' => true],
 
+                [
+                    'nome' => 'Pudim',
+                    'descricao' => 'Fatia de pudim',
+                    'preco' => 9.90,
+                    'destaque' => false
+                ],
+                [
+                    'nome' => 'Sorvete',
+                    'descricao' => 'Sorvete com cobertura',
+                    'preco' => 10.00,
+                    'destaque' => true
+                ],
             ],
-            ];
-          foreach ($produtos as $nomeCategoria => $itens) {
-            $categoria = Categoria::where('nome', $nomeCategoria)->firstOrFail();
+        ];
 
+        foreach ($produtos as $nomeCategoria => $itens) {
+            $categoria = Categoria::where('nome', $nomeCategoria)->firstOrFail();
+    
             foreach ($itens as $produto) {
                 Produto::create(
                     [
@@ -59,8 +96,8 @@ class ProdutoSeeder extends Seeder
                         'ativo' => true,
                         'destaque' => $produto['destaque']
                     ]
-                    );
+                );
             }
-          }  
+        }
     }
 }
